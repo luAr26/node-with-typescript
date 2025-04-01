@@ -1,10 +1,11 @@
-import { createServer } from "node:http";
+import express from "express";
+import todoRoutes from "./routes/todo.js";
 
-const server = createServer((req, res) => {
-  console.log(req.method);
-  res.end("Hello World!");
-});
+const app = express();
+app.use(express.json());
 
-server.listen(3000, () => {
-  console.log("Listening on port 3000...");
+app.use(todoRoutes);
+
+app.listen(3000, () => {
+  console.log("listening on port 3000");
 });
