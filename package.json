@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "compile": "tsc",
-    "start": "node dist/app.js"
+    "start": "node dist/app.js",
+    "ts": "node --experimental-strip-types app.ts",
+    "tsx": "node --experimental-transform-types app.ts"
   },
   "keywords": [],
   "author": "",

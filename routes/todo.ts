@@ -4,6 +4,10 @@ import { addTodo, getTodo, getTodos, removeTodo, updateTodo } from "../data.ts";
 const router = express.Router();
 
 // function handlePostTodos(req: Request, res: Response) {}
+enum TODO_TYPE {
+  BASIC,
+  URGENT,
+}
 
 router.get("/todos", (req, res) => {
   const todos = getTodos();
